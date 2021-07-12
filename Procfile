@@ -1,1 +1,1 @@
-web: npx ts-node ./src/server.ts 
+web: npx sequelize db:migrate && npx ts-node ./src/server.ts 
