@@ -9,6 +9,7 @@ module.exports = {
         dialect: "mysql"
     }, 
     production: {
-        connectString: process.env.CLEARDB_DATABASE_URL
+        connectString: process.env.CLEARDB_DATABASE_URL,
+        dialect: "mysql"
     }
 };
