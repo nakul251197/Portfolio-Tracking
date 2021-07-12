@@ -1,13 +1,13 @@
 import { Sequelize } from "sequelize";
 const env = process.env.NODE_ENV || 'development';
-// const config = require(__dirname + '/../config/config.json')[env];
-import envConfig from "../config/config.json";
+import { sequelizeConfig } from "../config/config"
 
-let config: any = null;
-if(env == "production") config = envConfig.production;
-else config = envConfig.development;
-let connectString: any =  process.env.CLEARDB_DATABASE_URL;
-// let sequelize: Sequelize = new Sequelize(config.database, config.username, config.password, config);
-let sequelize: Sequelize = new Sequelize(connectString);
+let sequelize: Sequelize;
+if(env == "production") {
+    let connectString: any =  sequelizeConfig.production.connectString;
+    sequelize = new Sequelize(connectString);
+} else {
+    sequelize = new Sequelize(sequelizeConfig.development.database, sequelizeConfig.development.username, sequelizeConfig.development.password, sequelizeConfig.development);
+} 
 
 export {sequelize};
