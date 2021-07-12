@@ -4,7 +4,7 @@ import sequelizeConfig from "../config/config.json"
 let sequelize: Sequelize;
 
 if(env === "production") {
-    let connectString: any =  sequelizeConfig.production.use_env_variable || process.env.CLEARDB_DATABASE_URL;
+    let connectString: any =  process.env.CLEARDB_DATABASE_URL;
     sequelize = new Sequelize(connectString, {dialect: "mysql"});
 } else {
     let config: any =  sequelizeConfig.development || process.env.CLEARDB_DATABASE_URL;
