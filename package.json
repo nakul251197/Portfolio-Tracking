@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "npx nodemon --exec ts-node .\\src\\server.ts --watch src --ext .ts",
-    "start": "ts-node .\\src\\server.ts"
+    "start": "npx sequelize db:migrate && ts-node .\\src\\server.ts"
   },
   "author": "",
   "license": "ISC",
