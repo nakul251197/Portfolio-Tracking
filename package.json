@@ -1,0 +1,30 @@
+{
+  "name": "portfolio-tracking",
+  "version": "1.0.0",
+  "description": "This is a simple portfolio tracking API project",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "npx nodemon --exec ts-node .\\src\\server.ts --watch src --ext .ts",
+    "start": "ts-node .\\src\\server.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "@types/winston": "^2.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.0",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.5",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/express-validator": "^3.0.0",
+    "@types/node": "^16.3.0",
+    "@types/sequelize": "^4.28.10",
+    "nodemon": "^2.0.10",
+    "sequelize-cli": "^6.2.0",
+    "typescript": "^4.3.5"
+  }
+}
