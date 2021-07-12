@@ -1,7 +1,6 @@
 import { Sequelize } from "sequelize";
 const env = process.env.NODE_ENV || 'development';
-import { sequelizeConfig } from "../config/config"
-
+const sequelizeConfig = require('config/config');
 let sequelize: Sequelize;
 if(env == "production") {
     let connectString: any =  sequelizeConfig.production.connectString;

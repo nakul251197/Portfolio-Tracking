@@ -1,4 +1,6 @@
-let sequelizeConfig: any = {
+const fs = require('fs');
+
+module.exports = {
     development: {
         username: "root",
         password: "",
@@ -9,6 +11,4 @@ let sequelizeConfig: any = {
     production: {
         connectString: process.env.CLEARDB_DATABASE_URL
     }
-}
-
-export { sequelizeConfig };
+};
