@@ -5,7 +5,7 @@ let sequelize: Sequelize;
 
 if(env == "production") {
     let connectString: any =  sequelizeConfig.production.connectString;
-    sequelize = new Sequelize(connectString);
+    sequelize = new Sequelize(connectString, {dialect: "mysql"});
 } else {
     sequelize = new Sequelize(sequelizeConfig.development.database, sequelizeConfig.development.username, sequelizeConfig.development.password, sequelizeConfig.development);
 } 
