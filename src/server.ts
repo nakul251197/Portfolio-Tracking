@@ -15,5 +15,5 @@ app.use(function (req, res, next) {
 })
 app.listen(port, () => {
   logger.info(`Server started at port ${port}...`);
-  console.log(`Server started on port ${port}...`);
+  console.log(`Server started on port ${port} and ${process.env.NODE_ENV}...`);
 });
