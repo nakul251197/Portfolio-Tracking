@@ -10,7 +10,7 @@ portfolioRouter.get("/", async (request: Request, response: Response) => {
 
 portfolioRouter.get("/returns", async (request: Request, response: Response) => {
   let returns = await PortfolioService.getReturns();
-  response.status(200).json({return: returns});
+  response.status(200).json({returns: returns});
 });
 
 export default portfolioRouter;
